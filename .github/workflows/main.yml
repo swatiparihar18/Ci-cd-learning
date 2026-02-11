@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run a simple script
-        run: echo "Hello CI/CD 🚀 Pipeline is running!"
+        run: echo "Hello Swati CI/CD 🚀  Pipeline is running!"
