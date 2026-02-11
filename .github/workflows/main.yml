@@ -1,17 +1,12 @@
-name: CI Pipeline - Day 2
+steps:
+  - name: Checkout code
+    uses: actions/checkout@v4
 
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Run a simple script
-        run: echo "Hello Swati CI/CD 🚀  Pipeline is running!"
+  - name: Check if index.html exists
+    run: |
+      if [ -f index.html ]; then
+        echo "index.html found ✅"
+      else
+        echo "index.html missing ❌"
+        exit 1
+      fi
